@@ -1,2 +1,3 @@
-# mysql-db-build-tool
-MySQL建表语句生成工具
+[试用](https://article.hearu.top/db_create_table)
+
+![输入图片说明](create_table.jpg)
