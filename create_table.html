@@ -45,7 +45,7 @@
 <pre><code id="sql"></code></pre>
 
 <!--此处仅用来统计访问量使用-->
-<div style="display: none;"><img src="https://article.hearu.top/stat_db_create_table"></div>
+<div style="display: none;"><img src=""></div>
 
 <script type="text/javascript">
   var et = new zbEditTable();
@@ -77,8 +77,8 @@
       let map_basic = {
         'table_name' : [],
         'engine': ['InnoDB', 'MyISAM', 'MEMORY'],
-        'charset': ['utf8','utf8mb4'],
-        'collate': ['utf8_general_ci', 'utf8mb4_0900_ai_ci', 'utf8mb4_general_ci'],
+        'charset': ['utf8mb4','utf8'],
+        'collate': ['utf8mb4_general_ci', 'utf8mb4_0900_ai_ci', 'utf8_general_ci'],
         'table_comment': [],
       }
 
@@ -97,7 +97,7 @@
     } else if (table_id === 'field_list') {
       let map_fields = {
         'COLUMN_NAME':[],
-        'COLUMN_TYPE':['tinyint', 'int', 'bigint', 'float()', 'double()', 'decimal(10,2)', 'char()', 'varchar()', 'text', 'date', 'datetime'],
+        'COLUMN_TYPE':['tinyint', 'int', 'bigint', 'float()', 'double()', 'decimal(10,2)', 'char()', 'varchar(255)', 'text', 'date', 'datetime'],
         'COLUMN_KEY':['PRI'],
         'IS_NULLABLE':['NO', 'YES'],
         'COLUMN_DEFAULT':["''", '0', 'CURRENT_TIMESTAMP'],
@@ -257,7 +257,7 @@
         values:['表名', '引擎', '默认编码', '字符集', '注释']
       },
       tbody:{
-        values:[['','InnoDB','utf8mb4','utf8mb4_0900_ai_ci', '']]
+        values:[['','InnoDB','utf8mb4','utf8mb4_general_ci', '']]
       }
     });
     document.getElementById('basic_info').appendChild(domTable);
